@@ -6,21 +6,26 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-size: cover;
 }
 
 
 .App-link {
-  color: #61dafb;
+  color: #030303;
 }
 
 .App-one {
-  color: rgb(47, 91, 187);
+  color: rgb(85, 139, 255);
+  font-family: 'Fraunces', serif;
+
 }
 
 h1 {
+  margin: 0;
   font-size: 3em;
 }
 
 .fas {
   margin: 0 10px;
+  color:  rgb(255, 215, 85);
 }
