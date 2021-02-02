@@ -1,7 +1,8 @@
 import React from 'react';
 import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
-// import '../styles/App.css';
+import SignUpPage from '../page-components/SignUpPage';
+import '../styles/App.css';
 
 
 
@@ -18,7 +19,7 @@ function App() {
         <h1>Login Page</h1>
       </Route>
       <Route exact path="/signup">
-        <h1>Sign up page</h1>
+        < SignUpPage />
       </Route>
       <Route exact path="/layovers/">
         <h1>List of layovers</h1>
