@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router-dom';
 import "../styles/SignUpForm.css";
+import OnelayoverAPI from '../onelayoverAPI';
+
 
 const SignUpForm = () => {
     const history = useHistory();
@@ -21,24 +23,28 @@ const SignUpForm = () => {
             ...formData, [name]: value
         }));
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log({formData})
-        try {
 
+        try {
+            let {token, userID} = await OnelayoverAPI.signUp({user: formData});
+            localStorage._token = token;
+            localStorage.userID = userID;
             setFormData(initialState);
+            history.push("/");
         } catch(err) {
             console.log({err})
             
         }
     }
+
     return (
         <div className="SignUpForm">
             <form className="SignUpForm" onSubmit={handleSubmit }>
                 <label htmlFor="username">Username </label>
                 <input type="text" name="username" id="username" onChange={handleChange} value={formData.username} />
                 <label htmlFor="password">Password: </label>
-                <input type="password" name="password" id="password" onChange={handleChange} value={formData.password}/>
+                <input type="password" name="password" id="password" autoComplete="off" onChange={handleChange} value={formData.password}/>
                 <label htmlFor="first_name">First Name: </label>
                 <input type="text" name="first_name" id="first_name" onChange={handleChange} value={formData.first_name}/>
                 <label htmlFor="last_name">Last Name: </label>
