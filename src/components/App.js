@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
 import SignUpPage from '../page-components/SignUpPage';
+import LayoversPage from '../page-components/LayoversPage';
 import '../styles/App.css';
 
 
@@ -22,7 +23,7 @@ function App() {
         < SignUpPage />
       </Route>
       <Route exact path="/layovers/">
-        <h1>List of layovers</h1>
+        <LayoversPage />
       </Route>
       <Route exact path="/layovers/:layover_code">
         <h1>Layover detail page</h1>
