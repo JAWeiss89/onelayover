@@ -9,13 +9,21 @@ class OnelayoverAPI {
         }
         console.debug("API Call:", endpoint, verb, data)
         try {
-            return (await axios({
-                method: verb,
-                url: `${BASE_URL}/${endpoint}`,
-                data: data
-            })).data
+            if(_token) {
+                return (await axios({
+                    method: verb,
+                    url: `${BASE_URL}/${endpoint}`,
+                    data : data,
+                    headers: {_token}
+            })).data 
+            } else {
+                return (await axios({
+                    method: verb,
+                    url: `${BASE_URL}/${endpoint}`,
+                    data : data
+                })).data 
+            }
             
-
         } catch(err) {
             console.error("API Error:", err.response);
         }
@@ -31,10 +39,17 @@ class OnelayoverAPI {
         return {token, userID}
     }
 
+    static async getUser(userID) {
+        let {user} = await this.request(`users/${userID}`, 'get');
+        return user;
+    }
+
     static async getLayovers() {
         let res = await this.request('layovers/','get');
         return res.layovers;
     }
+
+    
 
 }
 
