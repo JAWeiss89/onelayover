@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
 import SignUpPage from '../page-components/SignUpPage';
 import LayoversPage from '../page-components/LayoversPage';
+import LoginPage from '../page-components/LogInPage';
 import '../styles/App.css';
 
 
@@ -17,10 +18,10 @@ function App() {
         <h1>Landing Page</h1>
       </Route>
       <Route exact path="/login">
-        <h1>Login Page</h1>
+        <LoginPage />
       </Route>
       <Route exact path="/signup">
-        < SignUpPage />
+        <SignUpPage />
       </Route>
       <Route exact path="/layovers/">
         <LayoversPage />

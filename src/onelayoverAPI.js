@@ -27,7 +27,7 @@ class OnelayoverAPI {
     }
 
     static async login(userData) {
-        let {token, userID} = await this.request('/login', 'post', userData);
+        let {token, userID} = await this.request('login/', 'post', userData);
         return {token, userID}
     }
 
