@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 import "../styles/AuthForm.css"
 import OnelayoverAPI from '../onelayoverAPI';
 
-const LoginForm = () => {
+const LoginForm = ( { setUser } ) => {
     const history = useHistory();
 
     const initialState = {
@@ -26,6 +26,8 @@ const LoginForm = () => {
             localStorage._token = token;
             localStorage.userID = userID;
             setFormData(initialState);
+            let foundUser = await OnelayoverAPI.getUser(userID);
+            setUser(foundUser);
             history.push("/");
         } catch(err) {
             console.log({err})
