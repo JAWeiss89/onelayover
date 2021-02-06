@@ -59,6 +59,13 @@ class OnelayoverAPI {
         return res.activities;
     }
 
+    static async getActivity(layoverCode, activityID) {
+        let res = await this.request(`layovers/${layoverCode}/activities/${activityID}`)
+        let commentsResponse = await this.request(`layovers/${layoverCode}/activities/${activityID}/comments`);
+        res.activity.comments = commentsResponse.comments;
+        return res.activity;
+    }
+
     
 
 }

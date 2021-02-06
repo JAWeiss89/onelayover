@@ -9,7 +9,7 @@ const LayoversPage = () => {
     useEffect(() => {
         async function getLayovers() {
             let layovers = await OnelayoverAPI.getLayovers();
-            console.log({layovers});
+            layovers.reverse();
             setLayovers(layovers);
         }
         getLayovers();

@@ -2,6 +2,22 @@
     width: 99vw;
 }
 
+.LayoverDetailPage-facts-section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.LayoverDetailPage-facts-section p {
+    min-width: 50%;
+    text-align: center;
+}
+
+.LayoverDetailPage-facts-section i {
+    margin: auto;
+}
+
 .LayoverDetailPage-page-content h2 {
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 0;

@@ -1,15 +1,12 @@
-.LayoverDetailPage-facts-section {
-    width: 80%;
-    margin: auto;
+.ActivityCard {
     display: flex;
-    flex-wrap: wrap;
 }
 
-.LayoverDetailPage-facts-section p {
-    min-width: 50%;
-    text-align: center;
+.ActivityCard-title {
+    font-size: 1.3em;
+    margin: 0;
 }
 
-.LayoverDetailPage-facts-section i {
-    margin: auto;
+.ActivityCard-description {
+    margin: 0;
 }

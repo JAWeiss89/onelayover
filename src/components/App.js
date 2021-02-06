@@ -6,6 +6,7 @@ import SignUpPage from '../page-components/SignUpPage';
 import LayoversPage from '../page-components/LayoversPage';
 import LayoverDetailPage from '../page-components/LayoverDetailPage';
 import LoginPage from '../page-components/LogInPage';
+import ActivityDetailPage from '../page-components/ActivityDetailPage';
 import '../styles/App.css';
 import OnelayoverAPI from '../onelayoverAPI';
 
@@ -44,6 +45,9 @@ function App() {
       </Route>
       <Route exact path="/layovers/:layover_code">
         <LayoverDetailPage />
+      </Route>
+      <Route exact path="/layovers/:layover_code/activities/:id">
+        <ActivityDetailPage />
       </Route>
     </div>
   );

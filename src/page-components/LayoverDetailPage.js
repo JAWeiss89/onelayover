@@ -47,7 +47,7 @@ const LayoverDetailPage = () => {
                     ?
                     <div className="LayoverDetailPage-activities">
                     {activities.map((activity) => {
-                        return <ActivityCard activity={activity} key={activity.id}/>
+                        return <ActivityCard layover={layover} activity={activity} key={activity.id}/>
                     })}
                     </div>
                     :
