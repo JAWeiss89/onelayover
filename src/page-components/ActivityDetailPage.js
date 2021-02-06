@@ -13,7 +13,7 @@ const ActivityDetailPage = () => {
             console.log({activity})
         }
         getActivity();
-    }, []);
+    }, [id, layover_code]);
     return (
         <div className="ActivityDetailPage">
             {activity

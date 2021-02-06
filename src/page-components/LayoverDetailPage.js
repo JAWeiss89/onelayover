@@ -21,7 +21,7 @@ const LayoverDetailPage = () => {
         }
         getLayover();
         getActivities();
-    }, []);
+    }, [layover_code]);
 
     return (
         <div className="LayoverDetailPage">
