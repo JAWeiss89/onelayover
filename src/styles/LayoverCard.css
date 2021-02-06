@@ -8,6 +8,11 @@
     margin: 0;
 }
 
+.LayoverCard img {
+    width: 400px;
+    height: 300px;
+}
+
 .LayoverCard-code {
     font-size: 4em;
     text-transform: uppercase;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
+import LandingPage from '../page-components/LandingPage';
 import SignUpPage from '../page-components/SignUpPage';
 import LayoversPage from '../page-components/LayoversPage';
 import LayoverDetailPage from '../page-components/LayoverDetailPage';
@@ -30,7 +31,7 @@ function App() {
       {/* <h1><span className="App-logo-one">one</span><span className="App-logo-layover">layover</span></h1>
       <h2>landing soon!<i className="fas fa-plane"></i></h2> */}
       <Route exact path="/">
-        <h1>Landing Page</h1>
+        <LandingPage />
       </Route>
       <Route exact path="/login">
         <LoginPage setUser={setUser} />

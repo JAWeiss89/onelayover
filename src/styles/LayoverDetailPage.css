@@ -1,0 +1,34 @@
+.LayoverDetailPage {
+    width: 99vw;
+}
+
+.LayoverDetailPage-page-content h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    font-size: 4em;
+}
+
+.LayoverDetailPage-page-content {
+    width: 100%;
+}
+
+.LayoverDetailPage-main-image {
+    width: 100%;
+    max-height: 60vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.fas {
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    background-color: rgb(218, 218, 218);
+    color: white;
+    padding: 2px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+

@@ -1,0 +1,15 @@
+.LayoverDetailPage-facts-section {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.LayoverDetailPage-facts-section p {
+    min-width: 50%;
+    text-align: center;
+}
+
+.LayoverDetailPage-facts-section i {
+    margin: auto;
+}

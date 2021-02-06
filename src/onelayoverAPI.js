@@ -54,6 +54,11 @@ class OnelayoverAPI {
         return res.layover;
     }
 
+    static async getActivities(layoverCode) {
+        let res = await this.request(`layovers/${layoverCode}/activities`, 'get');
+        return res.activities;
+    }
+
     
 
 }
