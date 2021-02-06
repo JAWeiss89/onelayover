@@ -1,0 +1,23 @@
+.LayoverCard {
+    border: 1px solid rgb(40, 40, 40);
+    margin: 15px;
+    position: relative;
+}
+
+.LayoverCard p {
+    margin: 0;
+}
+
+.LayoverCard-code {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-family: 'Lexend Mega', sans-serif;
+    position:absolute;
+    bottom:10px;
+    right: 0;
+    text-shadow: -1px 1px 0 rgb(131, 131, 131),
+    1px 1px 0 rgb(131, 131, 131),
+   1px -1px 0 rgb(131, 131, 131),
+  -1px -1px 0 rgb(131, 131, 131);
+    color: rgb(233, 219, 219);
+}

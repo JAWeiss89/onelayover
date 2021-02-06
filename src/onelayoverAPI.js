@@ -49,6 +49,11 @@ class OnelayoverAPI {
         return res.layovers;
     }
 
+    static async getLayover(layoverCode) {
+        let res = await this.request(`layovers/${layoverCode}/`, 'get');
+        return res.layover;
+    }
+
     
 
 }

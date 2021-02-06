@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { Route } from 'react-router-dom';
 import SignUpPage from '../page-components/SignUpPage';
 import LayoversPage from '../page-components/LayoversPage';
+import LayoverDetailPage from '../page-components/LayoverDetailPage';
 import LoginPage from '../page-components/LogInPage';
 import '../styles/App.css';
 import OnelayoverAPI from '../onelayoverAPI';
@@ -41,7 +42,7 @@ function App() {
         <LayoversPage />
       </Route>
       <Route exact path="/layovers/:layover_code">
-        <h1>Layover detail page</h1>
+        <LayoverDetailPage />
       </Route>
     </div>
   );

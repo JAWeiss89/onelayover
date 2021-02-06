@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import OnelayoverAPI from '../onelayoverAPI';
+import LayoverCard from  '../components/LayoverCard';
+import '../styles/LayoversPage.css';
 
 const LayoversPage = () => {
     const [layovers, setLayovers] = useState(null);
@@ -20,11 +22,7 @@ const LayoversPage = () => {
             <div className="LayoversPage-layovers">
                 {layovers.map((layover) => {
                     return (
-                        <div id={layover.layover_code}>
-                        <h4>{layover.layover_code}</h4>
-                        <p>{layover.city_name}, {layover.country_name}</p>
-                        <img src={layover.thumbnail_url} alt={layover.city_name} style={{width:"120px"}}/>
-                        </div>
+                        < LayoverCard key={layover.layover_code} layover={layover}/>
                     )
                 })}
             </div>
