@@ -1,5 +1,5 @@
 .LayoverDetailPage {
-    width: 99vw;
+    width: 100%;
 }
 
 .LayoverDetailPage-facts-section {
@@ -35,7 +35,7 @@
     background-repeat: no-repeat;
 }
 
-.fas {
+.LayoverDetailPage-facts-section i {
     border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
     background-color: rgb(218, 218, 218);

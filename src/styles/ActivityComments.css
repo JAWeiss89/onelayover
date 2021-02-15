@@ -1,0 +1,18 @@
+.ActivityComments {
+    border-bottom: 1px solid rgb(213, 213, 213);
+    padding: 12px 20px;
+}
+
+.ActivityComments p {
+    margin: 0;
+}
+
+.ActivityComments-author {
+    font-size: .8em;
+    color: rgb(93, 93, 255);
+    padding-bottom: 5px;
+}
+
+.ActivityComments-body {
+    padding-left: 12px;
+}

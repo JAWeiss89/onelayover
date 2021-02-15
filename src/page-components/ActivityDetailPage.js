@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import OnelayoverAPI from '../onelayoverAPI';
 import AddPhotoForm from '../components/AddPhotoForm';
 import AddCommentForm from '../components/AddCommentForm';
 import ActivityComments from '../components/ActivityComments';
 import ActivityPhotos from '../components/ActivityPhotos';
+import "../styles/ActivityDetailPage.css";
 
 const ActivityDetailPage = () => {
     const {layover_code, id} = useParams();
@@ -35,9 +36,10 @@ const ActivityDetailPage = () => {
             {activity
             ?
             <div>
+                <Link to={`/layovers/${activity.layover_code}`}><h2><i className="fas fa-chevron-left"></i> {activity.layover_code}</h2></Link>
                 <h1>{activity.title}</h1>
-                <p>{activity.address} <i className="fas fa-map-marker-alt"></i></p>
-                <button onClick={toggleForm}>Add Photos</button>
+                <p className="ActivityDetailPage-address"><i className="fas fa-map-marker-alt"></i> {activity.address}</p>
+                <button onClick={toggleForm}>Add Photos <i className="fas fa-camera-retro"></i></button>
                 {formShown
                     ?
                     <AddPhotoForm />

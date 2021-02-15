@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import OnelayoverAPI from '../onelayoverAPI';
+import '../styles/ActivityComments.css';
 
 const ActivityComments = ( {comment} ) => {
     const [authorData, setAuthorData] = useState(false);
@@ -16,8 +17,8 @@ const ActivityComments = ( {comment} ) => {
             {authorData
             ?
             <div className="ActivityComments-comment">
-                <p>{comment.author}: </p>
-                <p>{comment.body}</p>
+                <p className="ActivityComments-author">{comment.author}: </p>
+                <p className="ActivityComments-body">{comment.body}</p>
             </div>
             :
             <p>Loading...</p>}

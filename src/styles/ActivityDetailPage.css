@@ -1,0 +1,14 @@
+.ActivityDetailPage h1 {
+    font-size: 4em;
+    margin:0;
+}
+
+.ActivityDetailPage h2 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: rgb(62, 62, 62);
+}
+
+.ActivityDetailPage-address {
+    color: rgb(70, 70, 70);
+}

@@ -10,3 +10,7 @@
 .ActivityCard-description {
     margin: 0;
 }
+
+.ActivityCard-image {
+    margin: 8px;
+}

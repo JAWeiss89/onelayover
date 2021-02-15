@@ -1,7 +1,8 @@
 .Navbar {
     display: flex;
     justify-content: space-between;
-
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
 .Navbar-logo {
@@ -10,4 +11,10 @@
 
 .Navbar-links *{
     margin-right: 10px;
+    font-size: .9em;
+}
+
+.Navbar-links {
+    display: flex;
+    align-items: flex-end;
 }
