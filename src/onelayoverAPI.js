@@ -69,7 +69,9 @@ class OnelayoverAPI {
         if (photosResponse && photosResponse.photos) {
             res.activity.photos = photosResponse.photos;
         }
-        return res.activity;
+        let activity = res.activity;
+        console.log({activity})
+        return activity;
     }
 
     static async postActivity(layoverCode, activityData) {
