@@ -3,25 +3,40 @@
 }
 
 .LayoverDetailPage-facts-section {
-    width: 80%;
+    width: 90%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
-.LayoverDetailPage-facts-section p {
-    min-width: 50%;
-    text-align: center;
+.LayoverDetailPage-facts-icon {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    min-width: 30%;
 }
 
-.LayoverDetailPage-facts-section i {
+.LayoverDetailPage-facts-icon p {
+    text-align: center;
+    font-size: .8em;
+}
+
+/* .LayoverDetailPage-facts-section i {
     margin: auto;
+    font-size: 2em;
+} */
+
+.LayoverDetailPage-page-content h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 4em;
 }
 
 .LayoverDetailPage-page-content h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
     margin-bottom: 0;
-    font-size: 4em;
+    color: rgb(145, 145, 145);
+    font-size: 1.1em;
 }
 
 .LayoverDetailPage-page-content {
@@ -39,10 +54,11 @@
     border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
     background-color: rgb(218, 218, 218);
-    color: white;
-    padding: 2px;
-    width: 25px;
-    height: 25px;
+    color: #424090;
+    padding: 10px;
+    width: 60px;
+    height: 60px; 
+    font-size: 2em;
     display: flex;
     justify-content: center;
     align-self: center;

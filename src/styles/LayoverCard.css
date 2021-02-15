@@ -1,3 +1,40 @@
+.LayoversPage-search * {
+    height: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LayoversPage-search {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.LayoversPage-search i {
+    font-size: 1.5em;
+    color: rgb(65, 65, 65);
+}
+
+.LayoversPage-search input {
+    width: 75%;
+    border: none;   
+    border-bottom: 1px solid rgb(58, 58, 58);
+    font-size: 1.5em;
+    padding-left: 10px;
+    background-color: inherit;
+}
+
+.LayoversPage-search input:focus {
+    outline: none;
+}
+
+.LayoversPage-search button {
+    width: 17%;
+    border-radius: 0;
+    box-shadow: none;
+}
+
 .LayoverCard {
     border: 1px solid rgb(40, 40, 40);
     margin: 15px;
