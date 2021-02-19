@@ -29,7 +29,7 @@ const ActivityCard = ({layover, activity}) => {
             </div>
             <div className="ActivityCard-text">
                 <Link to={`/layovers/${layover.layover_code}/activities/${activity.id}`}>
-                    <p className="ActivityCard-title">{activity.title} <span className="ActivityCard-rating">✈️✈️✈️✈️</span></p>
+                    <p className="ActivityCard-title">{activity.title} <span className="ActivityCard-rating"></span></p>
                 </Link>
                 <p className="ActivityCard-description">{activity.description}</p>
             </div>

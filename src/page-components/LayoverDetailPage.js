@@ -69,7 +69,9 @@ const LayoverDetailPage = () => {
                 <div className="LayoverDetailPage-activities-section">
                     <h4>Activities:</h4>
                     
-                    <button onClick={toggleForm}>Add Activity</button>
+                    <div className="LayoverDetailPage-row">
+                        <button onClick={toggleForm}>Add Activity</button>
+                    </div>
                     {formShown
                     ?
                     <AddActivityForm />

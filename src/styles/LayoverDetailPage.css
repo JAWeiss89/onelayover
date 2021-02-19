@@ -3,17 +3,17 @@
 }
 
 .LayoverDetailPage-facts-section {
-    width: 90%;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    overflow-x: scroll;
+
 }
 
 .LayoverDetailPage-facts-icon {
     display: flex;
     flex-direction: column;
     margin: auto;
-    min-width: 30%;
+    min-width: 20%;
 }
 
 .LayoverDetailPage-facts-icon p {
@@ -51,10 +51,10 @@
 }
 
 .LayoverDetailPage-facts-section i {
-    border: 1px solid rgb(211, 211, 211);
+    /* border: 1px solid rgb(211, 211, 211);
     border-radius: 5px;
-    background-color: rgb(218, 218, 218);
-    color: #636274;
+    background-color: rgb(218, 218, 218); */
+    color: #888792;
     padding: 10px;
     width: 60px;
     height: 60px; 
@@ -64,3 +64,8 @@
     align-self: center;
 }
 
+.LayoverDetailPage-activities-section  button {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}

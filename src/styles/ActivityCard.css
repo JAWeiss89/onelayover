@@ -1,5 +1,7 @@
 .ActivityCard {
     display: flex;
+    background-color: #ededed;
+    padding-top: 15px;
 }
 
 .ActivityCard-title {
@@ -13,4 +15,10 @@
 
 .ActivityCard-image {
     margin: 8px;
+}
+
+.LayoverDetailPage-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
