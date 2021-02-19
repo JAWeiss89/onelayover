@@ -21,7 +21,7 @@ const LayoversPage = () => {
             <h1>Layovers</h1>
             <div className="LayoversPage-search">
                 <input type="text" placeholder="e.g. CDG"/>
-                <button><i class="fas fa-search"></i></button>
+                <button><i className="fas fa-search"></i></button>
             </div>
             {layovers ?
             <div className="LayoversPage-layovers">

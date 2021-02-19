@@ -11,7 +11,7 @@ const AddActivityForm = () => {
         description: "",
         body: "",
         address: "",
-        type_id: ""
+        type_id: "1"
     };
     
     const [formData, setFormData] = useState(initialState);
@@ -34,6 +34,7 @@ const AddActivityForm = () => {
             let {message} = await OnelayoverAPI.postActivity(layover_code, layoverData);
             console.log({message});
             setFormData(initialState);
+            history.push(`/layovers`);
             history.push(`/layovers/${layover_code}`);
         } catch(err) {
             console.log({err})
@@ -48,12 +49,10 @@ const AddActivityForm = () => {
                 <input type="text" id="title" name="title" onChange={handleChange} value={formData.title} />
                 <label htmlFor="description">Description: </label>
                 <input type="text" id="description" name="description" onChange={handleChange} value={formData.description} />
-                <label htmlFor="body">Body: </label>
+                <label htmlFor="body">Body Text: </label>
                 <input type="text" id="body" name="body" onChange={handleChange} value={formData.body} />
                 <label htmlFor="address">Address: </label>
                 <input type="text" id="address" name="address" onChange={handleChange} value={formData.address} />
-                <label htmlFor="type">Activity Type: </label>
-                <input type="text" id="type" name="type_id" onChange={handleChange} value={formData.type_id} />
                 <button>Submit!</button>
             </form>
         </div>

@@ -92,6 +92,12 @@ class OnelayoverAPI {
         return res.comment;
     }
 
+    static async editComment(commentID, commentData) {
+        // commentData must have the following: userID, commnent, _token
+        let res = await this.request(`layovers/layoverCode/activities/activityID/comments/${commentID}`, 'patch', commentData);
+        return res.comment;
+    }
+
     
 
 }

@@ -12,15 +12,16 @@ const AddCommentForm = ({ activity }) => {
         setCommentBody(value);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const commentData = {
             userID: localStorage.userID,
             _token: localStorage._token,
             comment: {body: commentBody}
         }
-        OnelayoverAPI.postComment(layover_code, activity.id, commentData);
+        await OnelayoverAPI.postComment(layover_code, activity.id, commentData);
         setCommentBody("");
+        history.push(`/layovers/${layover_code}`);
         history.push(`/layovers/${layover_code}/activities/${activity.id}`);
 
     }
