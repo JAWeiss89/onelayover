@@ -1,0 +1,15 @@
+.EditComment textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+.EditComment button {
+    align-self: flex-end;
+    margin-right: 5px;
+}
+
+.EditComment-cancel {
+    background-color: rgb(220, 220, 220);
+}

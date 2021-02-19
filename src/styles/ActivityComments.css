@@ -3,16 +3,37 @@
     padding: 12px 20px;
 }
 
+.ActivityComments-comment-header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .ActivityComments p {
     margin: 0;
 }
 
 .ActivityComments-author {
-    font-size: .8em;
+    font-size: .9em;
     color: rgb(93, 93, 255);
     padding-bottom: 5px;
 }
 
+.ActivityComments-date {
+    font-size: .7em;
+    color: rgb(140, 140, 140);
+    margin-left: 6px;
+}
+
 .ActivityComments-body {
     padding-left: 12px;
+}
+
+.fa-edit {
+    color: rgb(184, 144, 74);
+}
+
+.fa-trash-alt {
+    color: rgb(215, 116, 116);
+    margin-left: 15px;
+
 }

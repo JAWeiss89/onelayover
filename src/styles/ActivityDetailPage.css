@@ -14,3 +14,26 @@
 .ActivityDetailPage-address {
     color: rgb(70, 70, 70);
 }
+
+.ActivityDetailPage button {
+    height: 30px;
+    margin-bottom: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.ActivityDetailPage-row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ActivityDetailPage-addcomment {
+    background-color: rgb(104, 104, 245);
+    color: white;
+}
+
+.ActivityDetailPage-comments {
+    background-color: rgb(240, 240, 240);
+}
+

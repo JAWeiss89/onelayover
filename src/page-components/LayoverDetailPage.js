@@ -46,7 +46,7 @@ const LayoverDetailPage = () => {
                     </div>
                     <div className="LayoverDetailPage-facts-icon">
                         <i className="fas fa-comments"></i>
-                        <p>Language: </p>
+                        <p>Language: Spanish</p>
                     </div>
                     <div className="LayoverDetailPage-facts-icon">
                         <i className="fas fa-flag"></i>

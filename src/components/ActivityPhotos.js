@@ -6,7 +6,7 @@ const ActivityPhotos = ( {activity} ) => {
     const handleClick = (e) => {
         console.log("photo_id", e.target.attributes.photo_id.value);
         const photoClicked = activity.photos.find((photo)=> {
-            return (photo.id == e.target.attributes.photo_id.value)
+            return (photo.id === e.target.attributes.photo_id.value)
         })
         setFeaturedImage(photoClicked);
     }

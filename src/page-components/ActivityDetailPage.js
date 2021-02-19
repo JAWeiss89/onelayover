@@ -39,7 +39,10 @@ const ActivityDetailPage = () => {
                 <Link to={`/layovers/${activity.layover_code}`}><h2><i className="fas fa-chevron-left"></i> {activity.layover_code}</h2></Link>
                 <h1>{activity.title}</h1>
                 <p className="ActivityDetailPage-address"><i className="fas fa-map-marker-alt"></i> {activity.address}</p>
-                <button onClick={toggleForm}>Add Photos <i className="fas fa-camera-retro"></i></button>
+                <div className="ActivityDetailPage-row">
+                    <button className="ActivityDetailPage-addphotos" onClick={toggleForm}>Add Photos <i className="fas fa-camera-retro"></i></button>
+                </div>
+                
                 {formShown
                     ?
                     <AddPhotoForm />
@@ -58,7 +61,10 @@ const ActivityDetailPage = () => {
                 <p>{activity.body}</p>
 
                 <h3>Comments: </h3>
-                <button onClick={toggleCommentForm}>Add Comment</button>
+                <div className="ActivityDetailPage-row">
+                    <button className="ActivityDetailPage-addcomment" onClick={toggleCommentForm}>Add Comment</button>
+                </div>
+                <div className="ActivityDetailPage-comments">
                 {commentFormShown
                     ?
                     <AddCommentForm activity={activity} />
@@ -69,7 +75,9 @@ const ActivityDetailPage = () => {
                     return (
                         <ActivityComments comment={comment} key={comment.id} />
                     )
-                })}
+                })}                
+                </div>
+
             </div>
 
             :

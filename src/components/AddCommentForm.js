@@ -1,6 +1,7 @@
 import React, {useState} from  'react';
 import { useHistory, useParams } from 'react-router-dom';
 import OnelayoverAPI from '../onelayoverAPI';
+import '../styles/AddCommentForm.css';
 
 const AddCommentForm = ({ activity }) => {
     const history = useHistory();
@@ -28,7 +29,7 @@ const AddCommentForm = ({ activity }) => {
         <div className="AddCommentForm">
             <form onSubmit={handleSubmit} >
                 <label htmlFor="body">Comment: </label>
-                <input type="text" id="body" name="body" onChange={handleChange} value={commentBody} />
+                <textarea rows={5} type="text" id="body" name="body" onChange={handleChange} value={commentBody} />
                 <button>Submit!</button>
             </form>
         </div>

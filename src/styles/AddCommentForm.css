@@ -1,0 +1,13 @@
+.AddCommentForm form button{
+    align-self: flex-end;
+    background-color: rgb(104, 104, 245);
+    color: white;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.AddCommentForm form textarea {
+    font-family: inherit;
+    font-size: 1.3em;
+    padding: 10px;
+}
