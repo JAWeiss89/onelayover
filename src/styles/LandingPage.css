@@ -43,7 +43,7 @@
 
 #logo-one {
     color: rgb(243, 188, 188); 
-    font-family: 'Fraunces', serif; 
+    /* font-family: 'Fraunces', serif;  */
 }
 
 #logo-layover {
@@ -51,7 +51,7 @@
 }
 
 #signup-btn {
-    background-color: rgb(148, 86, 86);
+    background-color: rgb(243, 188, 188);
     cursor: pointer;
     font-family: inherit;
 }

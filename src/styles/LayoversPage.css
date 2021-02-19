@@ -4,3 +4,9 @@
     justify-content: center;
     align-items: center;
 }
+
+.LayoversPage h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    font-size: 4em;
+}

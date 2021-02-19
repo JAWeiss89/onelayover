@@ -4,9 +4,9 @@ import "../styles/ActivityPhotos.css"
 const ActivityPhotos = ( {activity} ) => {
     const [featuredImage, setFeaturedImage] = useState(activity.photos[0]);
     const handleClick = (e) => {
-        console.log("photo_id", e.target.attributes.photo_id.value);
+        console.log(typeof(e.target.attributes.photo_id.value));
         const photoClicked = activity.photos.find((photo)=> {
-            return (photo.id === e.target.attributes.photo_id.value)
+            return (photo.id === Number(e.target.attributes.photo_id.value));
         })
         setFeaturedImage(photoClicked);
     }

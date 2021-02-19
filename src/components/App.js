@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import LandingPage from '../page-components/LandingPage';
 import SignUpPage from '../page-components/SignUpPage';
 import LayoversPage from '../page-components/LayoversPage';
@@ -32,13 +32,16 @@ function App() {
       {/* <h1><span className="App-logo-one">one</span><span className="App-logo-layover">layover</span></h1>
       <h2>landing soon!<i className="fas fa-plane"></i></h2> */}
       <Route exact path="/">
-        <LandingPage />
+        {user ? <Redirect to="/layovers/"/> : <LandingPage /> }
       </Route>
+
       <Route exact path="/login">
-        <LoginPage setUser={setUser} />
+        {user ? <Redirect to="/layovers/"/> : <LoginPage setUser={setUser} /> }
       </Route>
+
       <Route exact path="/signup" setUser={setUser}>
-        <SignUpPage setUser={setUser} />
+        {user ? <Redirect to="/layovers/"/> : <SignUpPage setUser={setUser} /> }
+        
       </Route>
       <Route exact path="/layovers/">
         <LayoversPage />
