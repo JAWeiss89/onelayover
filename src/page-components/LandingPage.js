@@ -4,7 +4,7 @@ import '../styles/LandingPage.css';
 
 const LandingPage = () => {
     return (
-        <div className="LandingPage">
+        <div className="LandingPage full-width">
             <div className="LandingPage-header">
                 <div className="Landingpage-header-contents">
                     <h1><span id="logo-one">one</span><span id="logo-layover">layover</span></h1>

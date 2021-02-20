@@ -30,7 +30,7 @@ const LayoverDetailPage = () => {
     }, [layover_code]);
 
     return (
-        <div className="LayoverDetailPage">
+        <div className="LayoverDetailPage full-width">
             {layover
             ? 
             <div className="LayoverDetailPage-page-content">

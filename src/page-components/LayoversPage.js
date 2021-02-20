@@ -30,7 +30,7 @@ const LayoversPage = () => {
     }
 
     return (
-        <div className="LayoversPage">
+        <div className="LayoversPage full-width">
             <h1>Layovers</h1>
             <div className="LayoversPage-search">
                 <input type="text" placeholder="e.g. CDG" onChange={handleChange} value={searchTerm}/>

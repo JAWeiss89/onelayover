@@ -1,6 +1,13 @@
 .App {
   width: 90%;
   margin-bottom: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
 }
 
 a {
@@ -33,6 +40,8 @@ form button {
   border: none;
   background-color: rgb(255, 185, 185);
   align-self: center;
+  margin-bottom: none;
+  margin: 20px;
 }
 
 button {

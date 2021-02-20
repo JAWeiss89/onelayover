@@ -32,7 +32,7 @@ const ActivityDetailPage = () => {
         getActivity();
     }, [id, layover_code]);
     return (
-        <div className="ActivityDetailPage">
+        <div className="ActivityDetailPage full-width">
             {activity
             ?
             <div>
