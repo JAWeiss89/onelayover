@@ -46,7 +46,7 @@ const LayoverDetailPage = () => {
                     </div>
                     <div className="LayoverDetailPage-facts-icon">
                         <i className="fas fa-comments"></i>
-                        <p>Language: Spanish</p>
+                        <p>Language: {layover.language}</p>
                     </div>
                     <div className="LayoverDetailPage-facts-icon">
                         <i className="fas fa-flag"></i>
@@ -54,15 +54,11 @@ const LayoverDetailPage = () => {
                     </div>
                     <div className="LayoverDetailPage-facts-icon">
                         <i className="fas fa-bell"></i>
-                        <p>Police Number: 105</p>
+                        <p>Police Number: {layover.police}</p>
                     </div>
                     <div className="LayoverDetailPage-facts-icon">
                         <i className="fas fa-ambulance"></i>
-                        <p>Ambulance Number: 116</p>
-                    </div>
-                    <div className="LayoverDetailPage-facts-icon">
-                        <i className="fas fa-ambulance"></i>
-                        <p>Ambulance Number: 116</p>
+                        <p>Ambulance Number: {layover.ambulance}</p>
                     </div>
                 </div>
 
