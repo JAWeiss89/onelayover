@@ -11,7 +11,7 @@ const LayoversPage = () => {
     useEffect(() => {
         async function getLayovers() {
             let layovers = await OnelayoverAPI.getLayovers();
-            console.log({layovers}); 
+            // console.log({layovers}); 
             setLayovers(layovers);
             setFilteredLayovers(layovers);
         }
@@ -33,7 +33,7 @@ const LayoversPage = () => {
         <div className="LayoversPage full-width">
             <h1>Layovers</h1>
             <div className="LayoversPage-search">
-                <input type="text" placeholder="e.g. CDG" onChange={handleChange} value={searchTerm}/>
+                <input type="text" placeholder="e.g. CDG or Paris" onChange={handleChange} value={searchTerm}/>
                 <button><i className="fas fa-search"></i></button>
             </div>
             {filteredLayovers ?

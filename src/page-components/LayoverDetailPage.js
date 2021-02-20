@@ -23,7 +23,7 @@ const LayoverDetailPage = () => {
         async function getActivities() {
             let activities = await OnelayoverAPI.getActivities(layover_code);
             setActivities(activities);
-            console.log(activities)
+            // console.log(activities)
         }
         getLayover();
         getActivities();

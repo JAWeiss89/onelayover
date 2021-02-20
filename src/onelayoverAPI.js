@@ -7,7 +7,7 @@ class OnelayoverAPI {
         if (_token) {
             data._token = _token;
         }
-        console.debug("API Call:", endpoint, verb, data)
+        // console.debug("API Call:", endpoint, verb, data)
         try {
             if(_token) {
                 return (await axios({
@@ -70,7 +70,6 @@ class OnelayoverAPI {
             res.activity.photos = photosResponse.photos;
         }
         let activity = res.activity;
-        console.log({activity})
         return activity;
     }
 

@@ -27,7 +27,7 @@ const ActivityDetailPage = () => {
             
             setActivity(activity);
 
-            console.log({activity})
+            // console.log({activity})
         }
         getActivity();
     }, [id, layover_code]);

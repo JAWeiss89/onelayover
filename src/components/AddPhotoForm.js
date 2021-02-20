@@ -26,8 +26,7 @@ const AddPhotoForm = () => {
                 _token : localStorage._token,
                 photo : formData
             }
-            let photo = await OnelayoverAPI.postPhoto(layover_code, id, photoData);
-            console.log({photo});
+            await OnelayoverAPI.postPhoto(layover_code, id, photoData);
             setFormData(initialState);
             history.push(`/layovers/${layover_code}`);
             history.push(`/layovers/${layover_code}/activities/${id}`);

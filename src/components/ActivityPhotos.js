@@ -4,7 +4,6 @@ import "../styles/ActivityPhotos.css"
 const ActivityPhotos = ( {activity} ) => {
     const [featuredImage, setFeaturedImage] = useState(activity.photos[0]);
     const handleClick = (e) => {
-        console.log(typeof(e.target.attributes.photo_id.value));
         const photoClicked = activity.photos.find((photo)=> {
             return (photo.id === Number(e.target.attributes.photo_id.value));
         })
@@ -16,8 +15,8 @@ const ActivityPhotos = ( {activity} ) => {
         <div className="ActivityPhotos-strip">
             {activity.photos.map((photo) => {
                 return (
-                    <div onClick={handleClick} className="ActivityPhotos-photo" key={photo.caption} >
-                        <img src={photo.url} alt={photo.caption} photo_id={photo.id}/>
+                    <div  className="ActivityPhotos-photo" key={photo.caption} >
+                        <img onClick={handleClick} src={photo.url} alt={photo.caption} photo_id={photo.id}/>
                     </div>
                 )
             })}
