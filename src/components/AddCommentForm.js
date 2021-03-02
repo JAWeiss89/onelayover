@@ -14,6 +14,7 @@ const AddCommentForm = ({ activity }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!commentBody) return;
         const commentData = {
             userID: localStorage.userID,
             _token: localStorage._token,

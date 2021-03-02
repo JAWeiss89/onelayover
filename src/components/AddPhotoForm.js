@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {useHistory, useParams} from 'react-router-dom';
 import OnelayoverAPI from '../onelayoverAPI';
 
-const AddPhotoForm = () => {
+const AddPhotoForm = ( {notify} ) => {
     const history = useHistory();
     const {layover_code, id} = useParams();
     const initialState = {
@@ -20,16 +20,21 @@ const AddPhotoForm = () => {
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
+
         try {
-            let photoData = {
-                userID : localStorage.userID,
-                _token : localStorage._token,
-                photo : formData
+            if (!formData.caption || !formData.url) {
+                notify("Please fill both required fields");
+            } else {
+                let photoData = {
+                    userID : localStorage.userID,
+                    _token : localStorage._token,
+                    photo : formData
+                }
+                await OnelayoverAPI.postPhoto(layover_code, id, photoData);
+                setFormData(initialState);
+                history.push(`/layovers/${layover_code}`);
+                history.push(`/layovers/${layover_code}/activities/${id}`);
             }
-            await OnelayoverAPI.postPhoto(layover_code, id, photoData);
-            setFormData(initialState);
-            history.push(`/layovers/${layover_code}`);
-            history.push(`/layovers/${layover_code}/activities/${id}`);
         } catch(err) {
             console.log({err})
         }    
@@ -41,11 +46,11 @@ const AddPhotoForm = () => {
                 <input type="text" id="caption" name="caption" onChange={handleChange} value={formData.caption} />
                 <label htmlFor="url">URL: </label>
                 <input type="text" id="url" name="url" onChange={handleChange} value={formData.url} />
-                <label htmlFor="main_img">Main Image ? </label>
+                {/* <label htmlFor="main_img">Main Image ? </label>
                 <select id="main_img" name="main_img" onChange={handleChange} value={formData.main_img} >
                     <option value={true} >True</option>
                     <option value={false} >False</option>
-                </select>
+                </select> */}
                 <button>Submit!</button>                
             </form>
         </div>

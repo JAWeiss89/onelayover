@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar';
+import Notications from './Notifications';
 import { Route, Redirect } from 'react-router-dom';
 import LandingPage from '../page-components/LandingPage';
 import SignUpPage from '../page-components/SignUpPage';
@@ -15,7 +16,15 @@ import OnelayoverAPI from '../onelayoverAPI';
 function App() {
 
   const [user, setUser] = useState(null);
-  
+  const [notificationText, setNotificationText] = useState(null);
+
+  const notify = (text) => {
+    setNotificationText(text);
+    setTimeout(() => {
+      setNotificationText(null);
+    }, 6000);
+  }
+
   useEffect(() => {
     const checkIfLoggedIn = async () => {
       if (localStorage._token && localStorage.userID) {
@@ -29,28 +38,30 @@ function App() {
   return (
     <div className="App">
       <Navbar user={user} setUser={setUser}/>
-      {/* <h1><span className="App-logo-one">one</span><span className="App-logo-layover">layover</span></h1>
-      <h2>landing soon!<i className="fas fa-plane"></i></h2> */}
+      {notificationText && <Notications notificationText={notificationText} notify={notify} />}
+
       <Route exact path="/">
         {user ? <Redirect to="/layovers/"/> : <LandingPage /> }
       </Route>
 
       <Route exact path="/login">
-        {user ? <Redirect to="/layovers/"/> : <LoginPage setUser={setUser} /> }
+        {user ? <Redirect to="/layovers/"/> : <LoginPage setUser={setUser} notify={notify} /> }
       </Route>
 
       <Route exact path="/signup" setUser={setUser}>
-        {user ? <Redirect to="/layovers/"/> : <SignUpPage setUser={setUser} /> }
-        
+        {user ? <Redirect to="/layovers/"/> : <SignUpPage setUser={setUser} notify={notify} /> }
       </Route>
+
       <Route exact path="/layovers/">
         <LayoversPage />
       </Route>
+
       <Route exact path="/layovers/:layover_code">
-        <LayoverDetailPage />
+        <LayoverDetailPage notify={notify} />
       </Route>
+
       <Route exact path="/layovers/:layover_code/activities/:id">
-        <ActivityDetailPage />
+        <ActivityDetailPage notify={notify} />
       </Route>
     </div>
   );

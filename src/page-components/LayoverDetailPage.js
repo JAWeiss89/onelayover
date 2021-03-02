@@ -5,7 +5,7 @@ import ActivityCard from '../components/ActivityCard';
 import AddActivityForm from '../components/AddActivityForm';
 import '../styles/LayoverDetailPage.css';
 
-const LayoverDetailPage = () => {
+const LayoverDetailPage = ( {notify} ) => {
     const {layover_code} = useParams();
     const [layover, setLayover] = useState(null);
     const [activities, setActivities] = useState(null);
@@ -23,7 +23,6 @@ const LayoverDetailPage = () => {
         async function getActivities() {
             let activities = await OnelayoverAPI.getActivities(layover_code);
             setActivities(activities);
-            // console.log(activities)
         }
         getLayover();
         getActivities();
@@ -70,7 +69,7 @@ const LayoverDetailPage = () => {
                     </div>
                     {formShown
                     ?
-                    <AddActivityForm />
+                    <AddActivityForm notify={notify} />
                     :
                     <div>
                     </div>}

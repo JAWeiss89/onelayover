@@ -4,7 +4,7 @@ import "../styles/AuthForm.css";
 import OnelayoverAPI from '../onelayoverAPI';
 
 
-const SignUpForm = () => {
+const SignUpForm = ( {setUser, notify} ) => {
     const history = useHistory();
 
     const initialState = {
@@ -27,14 +27,23 @@ const SignUpForm = () => {
         e.preventDefault();
 
         try {
+            if (!formData.username || !formData.password || !formData.first_name || !formData.last_name || !formData.email || !formData.airline) {
+                notify("Please fill in all fields")
+            } else if (!formData.email.includes('@')) {
+                notify("Please enter a valid email")
+            } else {
             let {token, userID} = await OnelayoverAPI.signUp({user: formData});
             localStorage._token = token;
             localStorage.userID = userID;
             setFormData(initialState);
+            let foundUser = await OnelayoverAPI.getUser(userID);
+            notify(null);
+            setUser(foundUser);
             history.push("/");
+            }
         } catch(err) {
-            console.log({err})
-            
+             console.log(err);
+            notify('Not able to register user. Please try again')
         }
     }
 

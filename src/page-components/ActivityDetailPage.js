@@ -7,7 +7,7 @@ import ActivityComments from '../components/ActivityComments';
 import ActivityPhotos from '../components/ActivityPhotos';
 import "../styles/ActivityDetailPage.css";
 
-const ActivityDetailPage = () => {
+const ActivityDetailPage = ( {notify} ) => {
     const {layover_code, id} = useParams();
     const [activity, setActivity] = useState(null);
     const [formShown, setFormShown] = useState(false);
@@ -45,7 +45,7 @@ const ActivityDetailPage = () => {
                 
                 {formShown
                     ?
-                    <AddPhotoForm />
+                    <AddPhotoForm notify={notify} />
                     :
                     <div>
                     </div>

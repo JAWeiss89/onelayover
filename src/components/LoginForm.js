@@ -3,7 +3,7 @@ import {useHistory} from 'react-router-dom';
 import "../styles/AuthForm.css"
 import OnelayoverAPI from '../onelayoverAPI';
 
-const LoginForm = ( { setUser } ) => {
+const LoginForm = ( { setUser, notify } ) => {
     const history = useHistory();
 
     const initialState = {
@@ -27,10 +27,15 @@ const LoginForm = ( { setUser } ) => {
             localStorage.userID = userID;
             setFormData(initialState);
             let foundUser = await OnelayoverAPI.getUser(userID);
+            notify(null);
             setUser(foundUser);
             history.push("/");
         } catch(err) {
-            console.log({err})
+            if (!formData.username || !formData.password) {
+                notify("Please fill in all fields")
+            } else {
+                notify("Error authenticating credentials! If problem persists, please try again later")
+            }
         }
     }
 

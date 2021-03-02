@@ -3,7 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 import OnelayoverAPI from '../onelayoverAPI';
 
 
-const AddActivityForm = () => {
+const AddActivityForm = ( {notify} ) => {
     const history = useHistory();
     const {layover_code} = useParams();
     const initialState = {
@@ -26,6 +26,10 @@ const AddActivityForm = () => {
         e.preventDefault();
 
         try {
+            if (!formData.title || !formData.description || !formData.body || !formData.address) {
+                notify("Please fill all fields in order to add activity");
+                return
+            }
             let layoverData = {
                 userID: localStorage.userID,
                 _token: localStorage._token, 
@@ -37,8 +41,7 @@ const AddActivityForm = () => {
             history.push(`/layovers`);
             history.push(`/layovers/${layover_code}`);
         } catch(err) {
-            console.log({err})
-            
+            notify("Unable to add activity. Please try again")
         }
     }
 
