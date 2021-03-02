@@ -22,6 +22,10 @@ const LoginForm = ( { setUser, notify } ) => {
         e.preventDefault();
 
         try {
+            if (!formData.username || !formData.password) {
+                notify("Please fill in all fields");
+                return;
+            }
             let {token, userID} = await OnelayoverAPI.login(formData);
             localStorage._token = token;
             localStorage.userID = userID;
@@ -30,12 +34,9 @@ const LoginForm = ( { setUser, notify } ) => {
             notify(null);
             setUser(foundUser);
             history.push("/");
+             
         } catch(err) {
-            if (!formData.username || !formData.password) {
-                notify("Please fill in all fields")
-            } else {
-                notify("Error authenticating credentials! If problem persists, please try again later")
-            }
+            notify("Error authenticating credentials! If problem persists, please try again later")
         }
     }
 
