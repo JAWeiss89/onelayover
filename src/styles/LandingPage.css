@@ -25,6 +25,13 @@
 .Landingpage-header-contents p {
     margin: 0;
     font-size: 1.2rem;
+    text-align: center;
+}
+
+@media only screen and (max-width : 375px) {
+    .Landingpage-header-contents p {
+        font-size: 1rem;
+    } 
 }
 
 .Landingpage-header-buttons {

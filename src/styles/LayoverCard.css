@@ -57,3 +57,21 @@
     right: 8px;
     color: rgb(255, 255, 255);
 }
+
+@media only screen and (max-width : 600px) {
+    .LayoverCard img {
+        width: 120px;
+        height: 80px;
+    }
+    .LayoverCard-code {
+        font-size: 2em;
+        text-transform: uppercase;
+        position:absolute;
+        bottom: 15px;
+        right: 8px;
+        color: rgb(255, 255, 255);
+    }
+    .LayoverCard-city {
+        font-size: .6em;
+    }
+}
