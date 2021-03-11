@@ -1,4 +1,5 @@
 import axios from 'axios';
+// Set REACT_APP_BASE_URL as environment variable on deployment 
 const BASE_URL = process.env.REACT_APP_BASE_URL || "http://localhost:3000";
 
 class OnelayoverAPI {
